@@ -1,6 +1,6 @@
 name: widget_to_marker
 description: convert Widgets To BitmapDescriptor
-version: 0.0.1
+version: 0.0.1+1
 homepage: https://github.com/Mohamedfaroouk/widget_to_marker
 
 environment:
