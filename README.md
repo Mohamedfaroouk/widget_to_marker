@@ -52,7 +52,7 @@ class TextOnImage extends StatelessWidget {
   }
 }
 ```
-##  2 - Add it to the marker with .toBitmapDescriptor():
+##  2 - Add it to the marker with   `.toBitmapDescriptor()`:
 ```dart
 Marker(
       markerId: const MarkerId("3"),
