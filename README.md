@@ -14,8 +14,7 @@ and the Flutter guide for
 
 ## Features
 
-this package allow you to use .toBitmapDescriptor() function on widget to covert it to a BitmapDescriptor
-to use it as a marker icon !
+this package allow you to use .toBitmapDescriptor() function on widget to Convert it to use it as a marker icon !
 # Getting started
 ## Add dependency
 
