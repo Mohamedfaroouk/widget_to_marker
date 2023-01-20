@@ -1,6 +1,6 @@
 name: widget_to_marker
-description: convert Widgets To BitmapDescriptor
-version: 0.0.1+1
+description: When using Google Maps, we always have a problem with adding a marker on the map, and the available tools were either drawing the marker through canva path or using an image, but the problem is if we want to add words or data or add custom edit to this marker, but this package has solved the problem and now you can use any widget in filters as a marker for google map !
+version: 0.0.1+3
 homepage: https://github.com/Mohamedfaroouk/widget_to_marker
 
 environment:
