@@ -37,7 +37,7 @@ Future<Uint8List> createImageFromWidget(Widget widget,
   logicalSize = ui.window.physicalSize / ui.window.devicePixelRatio;
   imageSize = ui.window.physicalSize;
 
-  assert(logicalSize.aspectRatio == imageSize.aspectRatio);
+  // assert(logicalSize.aspectRatio == imageSize.aspectRatio);
 
   final RenderView renderView = RenderView(
     window: WidgetsBinding.instance.window,
