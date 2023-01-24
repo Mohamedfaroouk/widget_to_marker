@@ -1,6 +1,6 @@
 name: widget_to_marker
 description: When using Google Maps,  can convert any widget in Flutter to a marker without using custom canvas
-version: 1.0.0
+version: 1.0.0+1
 homepage: https://github.com/Mohamedfaroouk/widget_to_marker
 
 environment:
