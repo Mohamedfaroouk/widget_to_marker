@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-extension toBitDescription on Widget {
+extension ToBitDescription on Widget {
   Future<BitmapDescriptor> toBitmapDescriptor(
       {Size logicalSize = const Size(100, 100),
       Size imageSize = const Size(100, 100),
