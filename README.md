@@ -20,7 +20,7 @@ using the .toBitmapDescriptor() function on the widget to use it as a marker ico
 
 ```dart
 dependencies:
-  widget_to_marker: ^1.0.2
+  widget_to_marker: ^1.0.3
 ```
 ##  1 - Create Your Widget To Make it as Marker:
 

@@ -7,8 +7,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 extension ToBitDescription on Widget {
   Future<BitmapDescriptor> toBitmapDescriptor(
-      {Size logicalSize = const Size(100, 100),
-      Size imageSize = const Size(100, 100),
+      {Size? logicalSize,
+      Size? imageSize,
       Duration waitToRender = const Duration(milliseconds: 300),
       TextDirection textDirection = TextDirection.ltr}) async {
     final widget = RepaintBoundary(
@@ -28,14 +28,16 @@ extension ToBitDescription on Widget {
 /// wait [waitToRender] to render the widget that take time like network and asset images
 
 /// The final image will be of size [imageSize] and the the widget will be layout, ... with the given [logicalSize].
+/// By default Value of  [imageSize] and [logicalSize] will be calculate from the app main window
+
 Future<Uint8List> createImageFromWidget(Widget widget,
-    {required Size logicalSize,
+    {Size? logicalSize,
     required Duration waitToRender,
-    required Size imageSize}) async {
+    Size? imageSize}) async {
   final RenderRepaintBoundary repaintBoundary = RenderRepaintBoundary();
 
-  logicalSize = ui.window.physicalSize / ui.window.devicePixelRatio;
-  imageSize = ui.window.physicalSize;
+  logicalSize ??= ui.window.physicalSize / ui.window.devicePixelRatio;
+  imageSize ??= ui.window.physicalSize;
 
   // assert(logicalSize.aspectRatio == imageSize.aspectRatio);
 

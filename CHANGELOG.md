@@ -1,3 +1,6 @@
+## 1.0.3
+ Refactor Code and fix some issues
+
 ## 1.0.2
  Fix logical and image size.
 
