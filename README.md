@@ -13,14 +13,14 @@ and the Flutter guide for
 
 
 ## Features
-When using Google Maps, we always have a problem with adding a marker on the map, and the available tools were either drawing the marker through canva path or using an image, but the problem is if we want to add words or data or add custom edit to this marker, but this package has solved the problem and now you can use any widget in flutter as a marker for google map !
+When using Google Maps, we always have a problem with adding a marker on the map, and the available tools were either drawing the marker through canvas path or using an image, but the problem is if we want to add words or data or add custom edit to this marker, but this package has solved the problem and now you can use any widget in flutter as a marker for google map !
 using the .toBitmapDescriptor() function on the widget to Convert it to use it as a marker icon!
 # Getting started
 ## Add dependency
 
 ```dart
 dependencies:
-  widget_to_marker: ^1.0.1
+  widget_to_marker: ^1.0.2
 ```
 ##  1 - Create Your Widget To Make it as Marker:
 

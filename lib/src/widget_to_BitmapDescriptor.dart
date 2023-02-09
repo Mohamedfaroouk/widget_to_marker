@@ -18,8 +18,8 @@ extension toBitDescription on Widget {
     );
     final pngBytes = await createImageFromWidget(widget,
         waitToRender: waitToRender,
-        logicalSize: Size(100, 100),
-        imageSize: Size(100, 100));
+        logicalSize: logicalSize,
+        imageSize: imageSize);
     return BitmapDescriptor.fromBytes(pngBytes);
   }
 }
