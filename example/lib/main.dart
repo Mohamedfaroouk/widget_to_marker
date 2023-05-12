@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:widget_to_marker/widget_to_marker.dart';
@@ -40,19 +38,22 @@ class _MyHomePageState extends State<MyHomePage> {
     markers.add(Marker(
       markerId: const MarkerId("1"),
       position: const LatLng(31.06976262630338, 31.23652808368206),
-      icon: await CountWidget(count: 1).toBitmapDescriptor(),
+      icon: await const CountWidget(count: 1).toBitmapDescriptor(
+          logicalSize: const Size(150, 150), imageSize: const Size(150, 150)),
     ));
     markers.add(Marker(
       markerId: const MarkerId("2"),
       position: const LatLng(30.418868934059237, 31.22851464897394),
-      icon: await MarkerWidget().toBitmapDescriptor(),
+      icon: await const MarkerWidget().toBitmapDescriptor(
+          logicalSize: const Size(150, 150), imageSize: const Size(150, 150)),
     ));
     markers.add(Marker(
       markerId: const MarkerId("3"),
       position: const LatLng(30.01124477440843, 30.78459296375513),
-      icon: await TextOnImage(
+      icon: await const TextOnImage(
         text: "Hello World",
-      ).toBitmapDescriptor(),
+      ).toBitmapDescriptor(
+          logicalSize: const Size(150, 150), imageSize: const Size(150, 150)),
     ));
     setState(() {});
   }
@@ -98,8 +99,8 @@ class MarkerWidget extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return Image(
-      image: const AssetImage(
+    return const Image(
+      image: AssetImage(
         "assets/marker2.png",
       ),
       height: 150,
@@ -119,8 +120,8 @@ class TextOnImage extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        Image(
-          image: const AssetImage(
+        const Image(
+          image: AssetImage(
             "assets/marker.png",
           ),
           height: 150,
@@ -128,7 +129,7 @@ class TextOnImage extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
         )
       ],
     );

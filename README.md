@@ -20,7 +20,7 @@ using the .toBitmapDescriptor() function on the widget to use it as a marker ico
 
 ```dart
 dependencies:
-  widget_to_marker: ^1.0.3
+  widget_to_marker: ^1.0.4
 ```
 ##  1 - Create Your Widget To Make it as Marker:
 
@@ -61,7 +61,9 @@ Marker(
       position: const LatLng(30.01124477440843, 30.78459296375513),
       icon: await TextOnImage(
         text: "Hello World",
-      ).toBitmapDescriptor(),
+      ).toBitmapDescriptor(
+         logicalSize: const Size(150, 150), imageSize: const Size(150, 150)
+      ),
     )
 ```
 ## Note

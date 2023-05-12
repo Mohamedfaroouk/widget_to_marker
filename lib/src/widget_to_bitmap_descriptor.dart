@@ -35,14 +35,14 @@ Future<Uint8List> createImageFromWidget(Widget widget,
     required Duration waitToRender,
     Size? imageSize}) async {
   final RenderRepaintBoundary repaintBoundary = RenderRepaintBoundary();
-
-  logicalSize ??= ui.window.physicalSize / ui.window.devicePixelRatio;
-  imageSize ??= ui.window.physicalSize;
+  final view = ui.PlatformDispatcher.instance.views.first;
+  logicalSize ??= view.physicalSize / view.devicePixelRatio;
+  imageSize ??= view.physicalSize;
 
   // assert(logicalSize.aspectRatio == imageSize.aspectRatio);
 
   final RenderView renderView = RenderView(
-    window: WidgetsBinding.instance.window,
+    view: view,
     child: RenderPositionedBox(
         alignment: Alignment.center, child: repaintBoundary),
     configuration: ViewConfiguration(
