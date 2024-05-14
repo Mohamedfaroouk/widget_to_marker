@@ -39,13 +39,13 @@ class _MyHomePageState extends State<MyHomePage> {
       markerId: const MarkerId("1"),
       position: const LatLng(31.06976262630338, 31.23652808368206),
       icon: await const CountWidget(count: 1).toBitmapDescriptor(
-          logicalSize: const Size(150, 150), imageSize: const Size(150, 150)),
+          logicalSize: const Size(100, 100), imageSize: const Size(300, 300)),
     ));
     markers.add(Marker(
       markerId: const MarkerId("2"),
       position: const LatLng(30.418868934059237, 31.22851464897394),
       icon: await const MarkerWidget().toBitmapDescriptor(
-          logicalSize: const Size(150, 150), imageSize: const Size(150, 150)),
+          logicalSize: const Size(20, 20), imageSize: const Size(200, 200)),
     ));
     markers.add(Marker(
       markerId: const MarkerId("3"),
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
       icon: await const TextOnImage(
         text: "Hello World",
       ).toBitmapDescriptor(
-          logicalSize: const Size(150, 150), imageSize: const Size(150, 150)),
+          logicalSize: const Size(150, 150), imageSize: const Size(300, 400)),
     ));
     setState(() {});
   }

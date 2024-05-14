@@ -36,7 +36,7 @@ Future<Uint8List> createImageFromWidget(Widget widget,
     Size? imageSize}) async {
   final RenderRepaintBoundary repaintBoundary = RenderRepaintBoundary();
   final view = ui.PlatformDispatcher.instance.views.first;
-  logicalSize ??= view.physicalSize / view.devicePixelRatio;
+  logicalSize ??= view.physicalSize;
   imageSize ??= view.physicalSize;
 
   // assert(logicalSize.aspectRatio == imageSize.aspectRatio);
@@ -49,7 +49,7 @@ Future<Uint8List> createImageFromWidget(Widget widget,
       physicalConstraints:
           BoxConstraints.tight(logicalSize) * view.devicePixelRatio,
       logicalConstraints: BoxConstraints.tight(logicalSize),
-      devicePixelRatio: 1.0,
+      devicePixelRatio: view.devicePixelRatio,
     ),
   );
 
