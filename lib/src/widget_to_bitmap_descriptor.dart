@@ -16,11 +16,17 @@ extension ToBitDescription on Widget {
           data: const MediaQueryData(),
           child: Directionality(textDirection: TextDirection.ltr, child: this)),
     );
+
+    final view = ui.PlatformDispatcher.instance.views.first;
+
     final pngBytes = await createImageFromWidget(widget,
         waitToRender: waitToRender,
+        view: view,
         logicalSize: logicalSize,
         imageSize: imageSize);
-    return BitmapDescriptor.fromBytes(pngBytes);
+
+    return BitmapDescriptor.bytes(pngBytes,
+        imagePixelRatio: view.devicePixelRatio);
   }
 }
 
@@ -33,10 +39,10 @@ extension ToBitDescription on Widget {
 Future<Uint8List> createImageFromWidget(Widget widget,
     {Size? logicalSize,
     required Duration waitToRender,
+    required ui.FlutterView view,
     Size? imageSize}) async {
   final RenderRepaintBoundary repaintBoundary = RenderRepaintBoundary();
-  final view = ui.PlatformDispatcher.instance.views.first;
-  logicalSize ??= view.physicalSize;
+  logicalSize ??= view.physicalSize / view.devicePixelRatio;
   imageSize ??= view.physicalSize;
 
   // assert(logicalSize.aspectRatio == imageSize.aspectRatio);
