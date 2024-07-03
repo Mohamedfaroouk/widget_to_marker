@@ -1,7 +1,7 @@
 name: widget_to_marker
 description: A package to convert any Flutter Widget to BitmapDescriptor which can be used in google_maps_flutter icon marker.
 
-version: 1.0.5
+version: 1.0.6
 homepage: https://github.com/Mohamedfaroouk/widget_to_marker
 
 environment:
